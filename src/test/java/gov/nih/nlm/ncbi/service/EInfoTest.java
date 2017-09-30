@@ -3,9 +3,10 @@ package gov.nih.nlm.ncbi.service;
 import gov.nih.nlm.ncbi.eutils.model.EInfoResult;
 import gov.nih.nlm.ncbi.eutils.service.EInfo;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 import java.util.HashMap;
+
+import static org.junit.Assert.assertNotNull;
 
 public class EInfoTest {
 
@@ -16,7 +17,7 @@ public class EInfoTest {
 
         HashMap<String, String> map = new HashMap<String, String>();
 
-        EInfoResult eInfoResult =  eInfo.run(map);
+        EInfoResult eInfoResult = eInfo.run(map);
 
         assertNotNull(eInfoResult);
 
@@ -24,7 +25,7 @@ public class EInfoTest {
 
     // Return version 2.0 statistics for Entrez Protein:
     @Test
-    public  void test2() throws Exception {
+    public void test2() throws Exception {
         EInfo eInfo = new EInfo();
 
         HashMap<String, String> map = new HashMap<String, String>();
